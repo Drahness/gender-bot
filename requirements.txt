@@ -13,5 +13,3 @@ tensorboard==1.14.0
 tensorflow==1.5.0
 tensorflow-estimator==1.14.0
 tensorflow-tensorboard==1.5.1
-
-
