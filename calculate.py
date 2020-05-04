@@ -25,7 +25,7 @@ def detect():
     loaded_model.load_weights("model.h5")
     print("Loaded model from disk")
 
-    # evaluate loaded model on test data
+   
     loaded_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 
 
@@ -40,7 +40,7 @@ def detect():
         return X, y
 
 
-    images2 = ["image.png"]
+    images2 = ["image.png"] 
     def testimage(imagec):
         X_test, y_test = process(imagec[0:1])
         x = np.array(X_test)
