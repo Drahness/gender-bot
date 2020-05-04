@@ -10,7 +10,7 @@ def callback(url):
     
 root = tk.Tk(); root.geometry("400x400"); root.title("gender-bot")
 
-photo = tk.PhotoImage(file="image.png")
+photo = tk.PhotoImage(file="image.png") 
 
 images = []
 
@@ -44,6 +44,6 @@ canvas.photo = photo
 
 link = tk.Label(root, text="https://github.com/erpk3", fg="blue", cursor="hand2", font='System 7 underline')
 link.place(x=235, y=383)
-link.bind("<Button-1>", lambda e: callback("https://github.com/erpk3"))
+link.bind("<Button-1>", lambda e: callback("https://github.com/erpk3")) #hyperlink
 
 root.mainloop()
