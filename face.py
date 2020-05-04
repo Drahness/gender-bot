@@ -14,12 +14,10 @@ from PIL import Image
 
 
 def don():
-    train = "train/crop_part1/"
-    imgs = "images/"
 
-    train_male = ["male images directory"]
-    train_female = ["female images directory"]
-    trainimgs = train_male[:4000] + train_female[:4000]
+    train_male = ["male images directory"]                  #directory to male images
+    train_female = ["female images directory"]              #directory to female images
+    trainimgs = train_male[:4000] + train_female[:4000]     #recommended amount of atleast 1000 for either gender
 
 
     del train_male
