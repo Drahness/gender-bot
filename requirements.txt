@@ -10,6 +10,6 @@ pycairo==1.16.2
 scikit-learn==0.22.2.post1
 sklearn==0.0
 tensorboard==1.14.0
-tensorflow==1.5.0
+tensorflow==1.15.2
 tensorflow-estimator==1.14.0
 tensorflow-tensorboard==1.5.1
