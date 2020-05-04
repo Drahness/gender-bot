@@ -17,9 +17,8 @@ def don():
     train = "train/crop_part1/"
     imgs = "images/"
 
-    train_male = ["train/crop_part1/{}".format(i) for i in os.listdir(train) if '0' in i.split("_")[1]]
-    train_female = ["train/crop_part1/{}".format(i) for i in os.listdir(train) if '1' in i.split("_")[1]]
-    images2 = ["test/{}".format(i) for i in os.listdir("test/")]
+    train_male = ["male images directory"]
+    train_female = ["female images directory"]
     trainimgs = train_male[:4000] + train_female[:4000]
 
 
@@ -38,8 +37,6 @@ def don():
         e = []
         a = []
         for image in imglist:
-            #img = Image.open(image)
-            #img.save("{}.jpeg".format(image))
             X.append(cv2.resize(cv2.imread(image, cv2.IMREAD_COLOR), (rows, columns),interpolation=cv2.INTER_CUBIC))
             image = image.split("crop_part1/")[1]
             age = image.split("_")[0]
@@ -86,16 +83,16 @@ def don():
     from keras.preprocessing.image import img_to_array, load_img
 
 
-
+   #  to continue training:
    # json_file = open('model.json', 'r')
     #loaded_model_json = json_file.read()
     #json_file.close()
     #loaded_model = model_from_json(loaded_model_json)
-    # load weights into new model
+    #  load weights into new model
     #loaded_model.load_weights("model.h5")
     #print("Loaded model from disk")
 
-    # evaluate loaded model on test data
+    #  evaluate loaded model on test data
     #loaded_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
     model = models.Sequential()
     model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
